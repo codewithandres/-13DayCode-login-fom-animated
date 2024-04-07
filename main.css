@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --primary-color: #037bca;
+    --white-color: #fff;
+    --radius: 8px;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--white-color);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-wrapper>img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login {
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+    background-color: rgba(225 225 225 / 3%);
+    border: 1px solid rgba(225 225 225 / 15%);
+    box-shadow: 0 25px 23px rgba(0 0 0 / 15%);
+    backdrop-filter: blur(15px);
+    border-radius: var(--radius);
+}
+
+form>div {
+    position: relative;
+    margin: 2em 0;
+}
+
+form div input {
+    outline: none;
+    width: 100%;
+    height: 50px;
+    padding: 0 1em;
+    border-radius: var(--radius);
+    background-color: transparent;
+}
+
+form div:not(.checkbox) input {
+    outline: 0;
+    width: 100%;
+    height: 45px;
+    padding: 0 1em;
+    border-radius: var(--radius);
+    background-color: transparent;
+    border: 1px solid rgba(225 225 225 / 55%);
+    color: var(--white-color);
+    font-family: inherit;
+}
+
+form div:not(.checkbox) :where(label, i) {
+    position: absolute;
+    top: 50%;
+    font-size: 14px;
+    left: 1em;
+    transform: translateY(-50%);
+    transition: top .3s, font-size .3s, color .3s;
+}
+
+form div:not(.checkbox) i {
+    right: 1em;
+    left: auto;
+}
+
+form div:not(.checkbox) input:focus~label,
+form div:not(.checkbox) input:not(:placeholder-shown):not(:focus)~label {
+    top: -10px;
+    font-size: 13px;
+    color: var(--primary-color);
+}
+
+form div:not(.checkbox) input:focus,
+form div:not(.checkbox) input:not(:placeholder-shown):not(:focus) {
+    border-color: rgba(225 225 225 / 85%);
+
+}
+
+form .checkbox {
+    text-align: left;
+    margin-top: -1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+form .checkbox label {
+    font-size: 14px;
+}
+
+form .checkbox input {
+    appearance: none;
+    margin: 0;
+    position: relative;
+    width: 1em;
+    height: 2.1em;
+    border: 1px solid rgb(225 225 225 / 15%);
+    border-radius: 60%;
+}
+
+form .checkbox input::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5);
+    width: 8px;
+    height: 8px;
+    background-color: rgb(0 0 0 / 15%);
+    border-radius: var(--radius);
+    transition: transform .3s, background-color .3s, border-color .3s;
+}
+
+form .checkbox input:checked {
+    border-color: var(--primary-color);
+}
+
+form .checkbox input:checked::before {
+    background-color: var(--primary-color);
+    transform: translate(-50%, -50%) scale(2);
+}
+
+form div button {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 35px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: var(--radius);
+    transition: background-color .3s;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: inherit;
+}
+
+form div button:hover {
+    background-color: #90465f;
+}
+
+form .split {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .split a {
+    color: var(--white-color);
+
+}
+
+form .split a:hover {
+    text-decoration: underline;
+}
