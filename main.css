@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     --primary-color: #037bca;
@@ -52,6 +52,14 @@ a {
     box-shadow: 0 25px 23px rgba(0 0 0 / 15%);
     backdrop-filter: blur(15px);
     border-radius: var(--radius);
+}
+
+.login h1 {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 3px;
+    font-size: 3rem;
 }
 
 form>div {
